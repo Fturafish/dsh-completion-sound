@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Completion Chime",
+    "description": "Plays a soft chime when a session finishes running, including background sessions."
+  }
+}

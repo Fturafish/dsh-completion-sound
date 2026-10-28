@@ -1,0 +1,39 @@
+{
+  "name": "@local/dsh-completion-sound",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Plays a short chime in the Harness Web UI when a session finishes running.",
+  "license": "MIT",
+  "author": "Fturafish",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fturafish/dsh-completion-sound.git"
+  },
+  "homepage": "https://github.com/Fturafish/dsh-completion-sound#readme",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  }
+}

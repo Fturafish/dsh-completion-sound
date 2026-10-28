@@ -1,0 +1,3 @@
+- insert:
+    - id: completion-sound
+      name: '@local/dsh-completion-sound'
